@@ -2,6 +2,7 @@
 # Author: Neil J. Squibb
 # Created: 20 July 2026
 # Last Updated: 20 July 2026
+# Licensed under the MIT License
 
 @tool 
 class_name DisableInEditor
@@ -14,6 +15,9 @@ extends Node
 ## and Particles3D nodes), and .stop() (for AnimationPlayer, AnimatedSprite2D,
 ## AudioStreamPlayer, AudioStreamPlayer2D, AudioStreamPlayer3D, Timer, Tween,
 ## VideoPlayer, and AnimationTree nodes).
+##
+## Reload of the scene is needed each time a new node is added to Selected
+## Nodes, or the Apply is toggled.
 
 ## The nodes you wish the disabler to apply to.
 @export var selected_nodes: Array[Node]
